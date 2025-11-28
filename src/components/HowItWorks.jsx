@@ -35,31 +35,31 @@ const HowItWorks = () => {
   ]
 
   return (
-    <section className="py-20 px-4 bg-beige-pale">
+    <section className="py-8 md:py-16 lg:py-20 px-4 bg-beige-pale">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-5xl md:text-6xl font-bold text-center mb-6 text-dark-gray">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center mb-3 md:mb-6 text-dark-gray">
           How it Works
         </h2>
-        <p className="text-center text-dark-gray mb-12 text-2xl font-medium">
+        <p className="text-center text-dark-gray mb-6 md:mb-12 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium px-4">
           Simple steps to make your community better
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {steps.map((step, index) => (
             <div
               key={index}
-              className="bg-white/80 backdrop-blur-xl rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border border-white/40"
+              className="bg-white/80 backdrop-blur-xl rounded-2xl md:rounded-3xl p-5 md:p-8 shadow-lg hover:shadow-2xl transition-all border border-white/40"
             >
               <div
-                className="text-5xl font-bold mb-2 text-center"
+                className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-center"
                 style={{ color: step.textColor === '#E4552C' ? '#8B0000' : step.textColor }}
               >
                 {step.number}
               </div>
-              <h3 className="text-2xl font-bold text-center mb-3 text-dark-gray">
+              <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-center mb-2 md:mb-3 text-dark-gray">
                 {step.title}
               </h3>
-              <p className="text-dark-gray text-center leading-relaxed text-lg">
+              <p className="text-dark-gray text-center leading-relaxed text-sm md:text-base lg:text-lg">
                 {step.description}
               </p>
             </div>

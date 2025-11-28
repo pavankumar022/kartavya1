@@ -2,7 +2,7 @@ const Features = () => {
   const features = [
     {
       icon: (
-        <svg className="w-20 h-20" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="aiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#E4552C" />
@@ -31,7 +31,7 @@ const Features = () => {
     },
     {
       icon: (
-        <svg className="w-20 h-20" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="locationGradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#1C7C3B" />
@@ -63,7 +63,7 @@ const Features = () => {
     },
     {
       icon: (
-        <svg className="w-20 h-20" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="#FFD700" />
@@ -95,7 +95,7 @@ const Features = () => {
     },
     {
       icon: (
-        <svg className="w-20 h-20" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="buildingGradient" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stopColor="#E4552C" />
@@ -131,7 +131,7 @@ const Features = () => {
     },
     {
       icon: (
-        <svg className="w-20 h-20" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="lockGradient" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stopColor="#2A9D5A" />
@@ -168,26 +168,26 @@ const Features = () => {
   ]
 
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="py-8 md:py-16 lg:py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-5xl md:text-6xl font-bold text-center mb-6 text-dark-gray">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center mb-3 md:mb-6 text-dark-gray">
           Features
         </h2>
-        <p className="text-center text-dark-gray mb-12 text-2xl font-medium">
+        <p className="text-center text-dark-gray mb-6 md:mb-12 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium px-4">
           Everything you need to make a difference
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all border border-white/40 bg-white/60 backdrop-blur-xl"
+              className="rounded-xl md:rounded-2xl p-4 md:p-6 shadow-lg hover:shadow-xl transition-all border border-white/40 bg-white/60 backdrop-blur-xl"
             >
-              <div className="flex justify-center mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-bold mb-2 text-dark-gray">
+              <div className="flex justify-center mb-3 md:mb-4">{feature.icon}</div>
+              <h3 className="text-base md:text-lg lg:text-xl font-bold mb-2 text-dark-gray text-center">
                 {feature.title}
               </h3>
-              <p className="text-dark-gray leading-relaxed text-base">
+              <p className="text-dark-gray leading-relaxed text-xs md:text-sm lg:text-base text-center">
                 {feature.description}
               </p>
             </div>

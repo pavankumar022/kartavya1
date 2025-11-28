@@ -33,27 +33,27 @@ const Leaderboard = () => {
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <div className="text-center mb-8">
-        <h1 className="text-5xl md:text-6xl font-bold text-dark-gray mb-4">
+    <div className="max-w-6xl mx-auto px-3 md:px-4 py-4 md:py-8">
+      <div className="text-center mb-4 md:mb-8">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-dark-gray mb-2 md:mb-4">
           🏆 Leaderboard
         </h1>
-        <p className="text-2xl text-dark-gray font-medium">
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-dark-gray font-medium px-4">
           Top contributors making a difference in their communities
         </p>
       </div>
 
-      <div className="bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100">
+      <div className="bg-white rounded-2xl md:rounded-3xl shadow-lg overflow-hidden border border-gray-100">
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead className="bg-dark-gray text-white">
               <tr>
-                <th className="px-6 py-4 text-left font-semibold">Rank</th>
-                <th className="px-6 py-4 text-left font-semibold">User</th>
-                <th className="px-6 py-4 text-left font-semibold">Points</th>
-                <th className="px-6 py-4 text-left font-semibold">Tier</th>
-                <th className="px-6 py-4 text-left font-semibold">Reports</th>
-                <th className="px-6 py-4 text-left font-semibold">Resolved</th>
+                <th className="px-3 md:px-6 py-3 md:py-4 text-left font-semibold text-xs md:text-sm lg:text-base">Rank</th>
+                <th className="px-3 md:px-6 py-3 md:py-4 text-left font-semibold text-xs md:text-sm lg:text-base">User</th>
+                <th className="px-3 md:px-6 py-3 md:py-4 text-left font-semibold text-xs md:text-sm lg:text-base">Points</th>
+                <th className="px-3 md:px-6 py-3 md:py-4 text-left font-semibold text-xs md:text-sm lg:text-base hidden sm:table-cell">Tier</th>
+                <th className="px-3 md:px-6 py-3 md:py-4 text-left font-semibold text-xs md:text-sm lg:text-base hidden md:table-cell">Reports</th>
+                <th className="px-3 md:px-6 py-3 md:py-4 text-left font-semibold text-xs md:text-sm lg:text-base hidden md:table-cell">Resolved</th>
               </tr>
             </thead>
             <tbody>
@@ -62,26 +62,26 @@ const Leaderboard = () => {
                   key={user.rank}
                   className={`border-b border-gray-200 hover:bg-beige-light transition-colors ${getRankColor(user.rank)}`}
                 >
-                  <td className="px-6 py-4">
-                    <div className="flex items-center space-x-2">
-                      <span className="text-2xl">{user.badge}</span>
-                      <span className="font-bold text-lg">#{user.rank}</span>
+                  <td className="px-3 md:px-6 py-3 md:py-4">
+                    <div className="flex items-center space-x-1 md:space-x-2">
+                      <span className="text-lg md:text-xl lg:text-2xl">{user.badge}</span>
+                      <span className="font-bold text-sm md:text-base lg:text-lg">#{user.rank}</span>
                     </div>
                   </td>
-                  <td className="px-6 py-4">
-                    <div className="font-semibold text-gray-800">{user.name}</div>
+                  <td className="px-3 md:px-6 py-3 md:py-4">
+                    <div className="font-semibold text-gray-800 text-xs md:text-sm lg:text-base">{user.name}</div>
                   </td>
-                  <td className="px-6 py-4">
-                    <span className="font-bold text-dark-red text-lg">{user.points.toLocaleString()}</span>
+                  <td className="px-3 md:px-6 py-3 md:py-4">
+                    <span className="font-bold text-dark-red text-sm md:text-base lg:text-lg">{user.points.toLocaleString()}</span>
                   </td>
-                  <td className="px-6 py-4">
-                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getTierColor(user.tier)}`}>
+                  <td className="px-3 md:px-6 py-3 md:py-4 hidden sm:table-cell">
+                    <span className={`px-2 md:px-3 py-1 rounded-full text-xs font-semibold ${getTierColor(user.tier)}`}>
                       {user.tier}
                     </span>
                   </td>
-                  <td className="px-6 py-4 text-gray-700">{user.reports}</td>
-                  <td className="px-6 py-4">
-                    <span className="text-green-secondary font-semibold">{user.resolved}</span>
+                  <td className="px-3 md:px-6 py-3 md:py-4 text-gray-700 text-xs md:text-sm lg:text-base hidden md:table-cell">{user.reports}</td>
+                  <td className="px-3 md:px-6 py-3 md:py-4 hidden md:table-cell">
+                    <span className="text-green-secondary font-semibold text-xs md:text-sm lg:text-base">{user.resolved}</span>
                   </td>
                 </tr>
               ))}
