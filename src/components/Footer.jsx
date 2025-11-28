@@ -1,13 +1,13 @@
-import { FaInstagram, FaTwitter, FaFacebookF, FaYoutube } from 'react-icons/fa';
+import { FaInstagram, FaTwitter, FaFacebookF, FaYoutube } from 'react-icons/fa'
 
 const Footer = () => {
   const quickLinks = ['About Us', 'Contact', 'Help Center', 'Terms of Service']
   const citizenLinks = ['Tracking', 'Report', 'Resources', 'Community']
   const social = [
-    { name: 'Instagram', icon: <FaInstagram /> },
-    { name: 'Twitter', icon: <FaTwitter /> },
-    { name: 'Facebook', icon: <FaFacebookF /> },
-    { name: 'YouTube', icon: <FaYoutube /> },
+    { name: 'Instagram', icon: <FaInstagram />, color: 'hover:bg-pink-500' },
+    { name: 'Twitter', icon: <FaTwitter />, color: 'hover:bg-blue-400' },
+    { name: 'Facebook', icon: <FaFacebookF />, color: 'hover:bg-blue-600' },
+    { name: 'YouTube', icon: <FaYoutube />, color: 'hover:bg-red-600' },
   ]
 
   return (
@@ -27,14 +27,14 @@ const Footer = () => {
             <h4 className="text-xl font-semibold mb-3">Follow Us</h4>
             <div className="flex gap-3">
               {social.map((item) => (
-                <span
+                <a
                   key={item.name}
-                  className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-xl"
+                  href="#"
+                  className={`w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center text-xl transition-all transform hover:scale-110 ${item.color}`}
+                  title={item.name}
                 >
-                  <span className="text-xl">  {/* Added wrapper span for proper icon sizing */}
-                    {item.icon}
-                  </span>
-                </span>
+                  {item.icon}
+                </a>
               ))}
             </div>
           </div>

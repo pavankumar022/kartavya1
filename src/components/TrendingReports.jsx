@@ -86,7 +86,7 @@ const TrendingReports = () => {
               className="bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all transform hover:scale-105 border border-gray-100"
             >
               <div className="text-6xl mb-4 text-center">{report.image}</div>
-              <h3 className="text-xl font-bold mb-2 text-dark-gray">
+              <h3 className="text-2xl font-bold mb-2 text-dark-gray">
                 {report.title}
               </h3>
               <div className="flex items-center justify-between mb-3">
